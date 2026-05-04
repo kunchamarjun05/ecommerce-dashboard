@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopPulse — E-Commerce Analytics Dashboard</title>
+    <meta name="description" content="Interactive E-Commerce Sales Analytics Dashboard with KPIs, charts, and insights">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+            </div>
+            <span class="brand-name">ShopPulse</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-page="overview" id="nav-overview">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                <span>Overview</span>
+            </a>
+            <a href="#" class="nav-item" data-page="products" id="nav-products">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <span>Products</span>
+            </a>
+            <a href="#" class="nav-item" data-page="customers" id="nav-customers">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                <span>Customers</span>
+            </a>
+            <a href="#" class="nav-item" data-page="orders" id="nav-orders">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>Orders</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="sidebar-badge">Portfolio Project</div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menu-toggle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <div>
+                    <h1 class="page-title" id="page-title">Dashboard Overview</h1>
+                    <p class="page-subtitle" id="page-subtitle">Real-time e-commerce analytics & insights</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="date-badge" id="date-badge"></div>
+            </div>
+        </header>
+
+        <!-- ===================== OVERVIEW PAGE ===================== -->
+        <div class="page-content active" id="page-overview">
+            <!-- KPI Cards -->
+            <div class="kpi-grid" id="kpi-grid">
+                <div class="kpi-card" id="kpi-revenue">
+                    <div class="kpi-icon revenue-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Total Revenue</span>
+                        <span class="kpi-value" id="kpi-total-revenue">--</span>
+                        <span class="kpi-change positive" id="kpi-revenue-change">--</span>
+                    </div>
+                </div>
+                <div class="kpi-card" id="kpi-orders-card">
+                    <div class="kpi-icon orders-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Total Orders</span>
+                        <span class="kpi-value" id="kpi-total-orders">--</span>
+                        <span class="kpi-change positive" id="kpi-orders-change">--</span>
+                    </div>
+                </div>
+                <div class="kpi-card" id="kpi-aov-card">
+                    <div class="kpi-icon aov-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Avg Order Value</span>
+                        <span class="kpi-value" id="kpi-aov">--</span>
+                        <span class="kpi-change" id="kpi-aov-change">--</span>
+                    </div>
+                </div>
+                <div class="kpi-card" id="kpi-customers-card">
+                    <div class="kpi-icon customers-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Total Customers</span>
+                        <span class="kpi-value" id="kpi-total-customers">--</span>
+                        <span class="kpi-change positive" id="kpi-customers-change">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Trend + Category Pie -->
+            <div class="chart-row">
+                <div class="chart-card wide" id="chart-revenue-trend-card">
+                    <div class="chart-header">
+                        <h3>Revenue Trend</h3>
+                        <span class="chart-badge">Monthly</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-revenue-trend"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card" id="chart-category-pie-card">
+                    <div class="chart-header">
+                        <h3>Revenue by Category</h3>
+                        <span class="chart-badge">Share %</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-category-pie"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Pie + City Bar -->
+            <div class="chart-row">
+                <div class="chart-card" id="chart-payment-pie-card">
+                    <div class="chart-header">
+                        <h3>Payment Methods</h3>
+                        <span class="chart-badge">Distribution</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-payment-pie"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card wide" id="chart-city-bar-card">
+                    <div class="chart-header">
+                        <h3>Top 10 Cities by Revenue</h3>
+                        <span class="chart-badge">Ranked</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-city-bar"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== PRODUCTS PAGE ===================== -->
+        <div class="page-content" id="page-products">
+            <div class="chart-row">
+                <div class="chart-card wide" id="chart-top-brands-card">
+                    <div class="chart-header">
+                        <h3>Top 10 Brands by Revenue</h3>
+                        <span class="chart-badge">Performance</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-top-brands"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card" id="chart-subcategory-pie-card">
+                    <div class="chart-header">
+                        <h3>Sub-Category Split</h3>
+                        <span class="chart-badge">Top 8</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-subcategory-pie"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Products Table -->
+            <div class="chart-card full-width" id="top-products-table-card">
+                <div class="chart-header">
+                    <h3>Top 15 Products by Revenue</h3>
+                    <span class="chart-badge">Detailed</span>
+                </div>
+                <div class="table-container">
+                    <table class="data-table" id="top-products-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Brand</th>
+                                <th>Qty Sold</th>
+                                <th>Revenue</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody id="top-products-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="chart-row">
+                <div class="chart-card full-width" id="chart-category-profit-card">
+                    <div class="chart-header">
+                        <h3>Profit Margin by Category</h3>
+                        <span class="chart-badge">Profitability</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-category-profit"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== CUSTOMERS PAGE ===================== -->
+        <div class="page-content" id="page-customers">
+            <div class="chart-row">
+                <div class="chart-card" id="chart-gender-pie-card">
+                    <div class="chart-header">
+                        <h3>Revenue by Gender</h3>
+                        <span class="chart-badge">Split</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-gender-pie"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card wide" id="chart-age-bar-card">
+                    <div class="chart-header">
+                        <h3>Revenue by Age Group</h3>
+                        <span class="chart-badge">Demographics</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-age-bar"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Customers Table -->
+            <div class="chart-card full-width" id="top-customers-table-card">
+                <div class="chart-header">
+                    <h3>Top 15 Customers by Lifetime Value</h3>
+                    <span class="chart-badge">VIP</span>
+                </div>
+                <div class="table-container">
+                    <table class="data-table" id="top-customers-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Customer</th>
+                                <th>City</th>
+                                <th>Orders</th>
+                                <th>Lifetime Value</th>
+                                <th>Avg Order</th>
+                            </tr>
+                        </thead>
+                        <tbody id="top-customers-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="chart-row">
+                <div class="chart-card full-width" id="chart-city-customers-card">
+                    <div class="chart-header">
+                        <h3>Customer Distribution by City</h3>
+                        <span class="chart-badge">Geography</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-city-customers"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== ORDERS PAGE ===================== -->
+        <div class="page-content" id="page-orders">
+            <div class="chart-row">
+                <div class="chart-card" id="chart-status-pie-card">
+                    <div class="chart-header">
+                        <h3>Order Status</h3>
+                        <span class="chart-badge">Distribution</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-status-pie"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card wide" id="chart-orders-trend-card">
+                    <div class="chart-header">
+                        <h3>Orders Over Time</h3>
+                        <span class="chart-badge">Monthly</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-orders-trend"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-row">
+                <div class="chart-card" id="chart-shipping-pie-card">
+                    <div class="chart-header">
+                        <h3>Shipping Type</h3>
+                        <span class="chart-badge">Split</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-shipping-pie"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card wide" id="chart-discount-bar-card">
+                    <div class="chart-header">
+                        <h3>Discount Impact on Revenue</h3>
+                        <span class="chart-badge">Analysis</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-discount-bar"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-row">
+                <div class="chart-card full-width" id="chart-dow-bar-card">
+                    <div class="chart-header">
+                        <h3>Orders by Day of Week</h3>
+                        <span class="chart-badge">Pattern</span>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-dow-bar"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

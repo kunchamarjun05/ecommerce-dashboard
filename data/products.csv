@@ -1,0 +1,81 @@
+product_id,product_name,category,sub_category,brand,price,cost_price,rating,review_count
+PROD-0001,Lenovo Smartphone Classic,Electronics,Smartphones,Lenovo,85654.19,51733.61,4.3,4378
+PROD-0002,Boat Headphone Pro,Electronics,Headphones,Boat,121819.8,71015.52,3.5,439
+PROD-0003,Samsung Camera Lite,Electronics,Cameras,Samsung,32384.66,21456.93,5.0,2057
+PROD-0004,Samsung Laptop Ultra,Electronics,Laptops,Samsung,104516.44,52603.04,3.9,2943
+PROD-0005,Apple Tablet Elite,Electronics,Tablets,Apple,93567.0,59549.23,4.7,4602
+PROD-0006,Xiaomi Tablet Classic,Electronics,Tablets,Xiaomi,78104.58,53024.56,3.2,389
+PROD-0007,Boat Tablet Classic,Electronics,Tablets,Boat,64234.24,43412.01,3.3,4528
+PROD-0008,Samsung Smartphone Ultra,Electronics,Smartphones,Samsung,112318.49,52911.05,4.5,3634
+PROD-0009,Lenovo Laptop Elite,Electronics,Laptops,Lenovo,113999.83,67409.84,3.0,1590
+PROD-0010,JBL Headphone Lite,Electronics,Headphones,JBL,29080.61,18580.49,4.9,4214
+PROD-0011,Boat Smartphone Max,Electronics,Smartphones,Boat,8972.23,4465.38,2.8,4789
+PROD-0012,Samsung Headphone Lite,Electronics,Headphones,Samsung,51591.73,33451.63,2.6,2647
+PROD-0013,Samsung Smartwatche Ultra,Electronics,Smartwatches,Samsung,116727.16,72239.91,4.2,4023
+PROD-0014,Zara Watche Elite,Fashion,Watches,Zara,1370.35,887.56,3.0,1511
+PROD-0015,Adidas Watche Elite,Fashion,Watches,Adidas,11857.0,5404.18,3.8,758
+PROD-0016,Levi's Footwear Max,Fashion,Footwear,Levi's,13284.93,8398.3,3.4,1794
+PROD-0017,Van Heusen Watche Classic,Fashion,Watches,Van Heusen,14949.48,10289.59,2.5,2839
+PROD-0018,Levi's Accessorie Elite,Fashion,Accessories,Levi's,13595.1,8358.2,3.1,331
+PROD-0019,Allen Solly Footwear Plus,Fashion,Footwear,Allen Solly,13763.21,10057.41,3.1,2321
+PROD-0020,Zara Men's Clothing Plus,Fashion,Men's Clothing,Zara,7859.34,4543.15,2.6,1582
+PROD-0021,Adidas Footwear Ultra,Fashion,Footwear,Adidas,14237.71,6529.25,3.8,65
+PROD-0022,Levi's Men's Clothing Ultra,Fashion,Men's Clothing,Levi's,10152.93,6810.12,4.2,856
+PROD-0023,Allen Solly Women's Clothing Classic,Fashion,Women's Clothing,Allen Solly,9803.45,7145.86,4.2,199
+PROD-0024,Zara Accessorie Lite,Fashion,Accessories,Zara,855.93,364.32,4.5,4576
+PROD-0025,Levi's Men's Clothing Plus,Fashion,Men's Clothing,Levi's,13690.5,7429.44,4.1,3552
+PROD-0026,Nike Footwear Pro,Fashion,Footwear,Nike,6024.68,2659.34,4.1,523
+PROD-0027,Ikea Storage Elite,Home & Kitchen,Storage,Ikea,35192.66,14971.18,2.8,2473
+PROD-0028,Ikea Storage Plus,Home & Kitchen,Storage,Ikea,14434.11,10455.23,3.5,257
+PROD-0029,Prestige Decor Plus,Home & Kitchen,Decor,Prestige,26905.65,12046.56,4.5,4475
+PROD-0030,Nilkamal Bedding Ultra,Home & Kitchen,Bedding,Nilkamal,7630.74,4861.17,4.7,3061
+PROD-0031,Godrej Furniture Pro,Home & Kitchen,Furniture,Godrej,43799.96,19687.24,2.5,4892
+PROD-0032,Godrej Decor Lite,Home & Kitchen,Decor,Godrej,27601.51,11862.97,4.4,2821
+PROD-0033,Bajaj Kitchen Appliance Lite,Home & Kitchen,Kitchen Appliances,Bajaj,45327.59,31639.14,2.9,1813
+PROD-0034,Philips Storage Ultra,Home & Kitchen,Storage,Philips,10118.15,4689.51,3.9,450
+PROD-0035,Bajaj Storage Classic,Home & Kitchen,Storage,Bajaj,32410.39,13793.88,2.7,809
+PROD-0036,Nilkamal Kitchen Appliance Max,Home & Kitchen,Kitchen Appliances,Nilkamal,29238.48,21432.95,2.8,1926
+PROD-0037,Philips Furniture Max,Home & Kitchen,Furniture,Philips,31165.03,22284.29,3.7,2694
+PROD-0038,Nilkamal Storage Elite,Home & Kitchen,Storage,Nilkamal,15629.94,9447.67,3.9,2596
+PROD-0039,Prestige Decor Lite,Home & Kitchen,Decor,Prestige,738.18,358.87,4.3,3577
+PROD-0040,Pearson Academic Plus,Books,Academic,Pearson,354.18,232.53,3.7,2943
+PROD-0041,O'Reilly Academic Elite,Books,Academic,O'Reilly,1147.18,529.45,2.7,2303
+PROD-0042,Wiley Non-Fiction Classic,Books,Non-Fiction,Wiley,472.22,310.13,2.7,622
+PROD-0043,Wiley Fiction Elite,Books,Fiction,Wiley,1299.09,889.13,3.5,4838
+PROD-0044,Penguin Non-Fiction Elite,Books,Non-Fiction,Penguin,1147.03,676.99,3.7,1222
+PROD-0045,O'Reilly Academic Classic,Books,Academic,O'Reilly,523.28,350.73,4.6,1101
+PROD-0046,Wiley Self-Help Elite,Books,Self-Help,Wiley,1068.78,575.94,2.5,1961
+PROD-0047,HarperCollins Comic Lite,Books,Comics,HarperCollins,1537.69,690.62,2.9,4640
+PROD-0048,O'Reilly Non-Fiction Ultra,Books,Non-Fiction,O'Reilly,1883.43,780.02,3.7,519
+PROD-0049,Pearson Academic Elite,Books,Academic,Pearson,543.64,344.67,4.8,2964
+PROD-0050,O'Reilly Self-Help Pro,Books,Self-Help,O'Reilly,1843.01,1305.85,5.0,2659
+PROD-0051,Wiley Fiction Classic,Books,Fiction,Wiley,1302.78,645.82,3.2,4464
+PROD-0052,HarperCollins Comic Elite,Books,Comics,HarperCollins,814.65,433.79,4.1,642
+PROD-0053,Nivea Personal Care Elite,Beauty & Health,Personal Care,Nivea,1974.19,1416.55,3.5,2831
+PROD-0054,Himalaya Supplement Lite,Beauty & Health,Supplements,Himalaya,4451.78,1790.99,3.6,1889
+PROD-0055,Biotique Skincare Lite,Beauty & Health,Skincare,Biotique,3269.86,1550.01,2.9,4936
+PROD-0056,Forest Essentials Skincare Classic,Beauty & Health,Skincare,Forest Essentials,1266.18,865.95,2.8,3927
+PROD-0057,Maybelline Supplement Plus,Beauty & Health,Supplements,Maybelline,3014.34,1888.61,2.6,358
+PROD-0058,Biotique Haircare Elite,Beauty & Health,Haircare,Biotique,3021.89,1351.25,2.6,4693
+PROD-0059,Lakme Haircare Elite,Beauty & Health,Haircare,Lakme,955.76,690.88,4.9,4914
+PROD-0060,Forest Essentials Personal Care Classic,Beauty & Health,Personal Care,Forest Essentials,239.31,155.99,4.6,707
+PROD-0061,Himalaya Haircare Plus,Beauty & Health,Haircare,Himalaya,3090.65,1746.2,2.9,3370
+PROD-0062,Maybelline Personal Care Lite,Beauty & Health,Personal Care,Maybelline,4002.89,2750.62,4.1,4189
+PROD-0063,Maybelline Makeup Plus,Beauty & Health,Makeup,Maybelline,3661.31,1903.64,4.0,568
+PROD-0064,Himalaya Haircare Lite,Beauty & Health,Haircare,Himalaya,2018.49,884.1,3.8,4136
+PROD-0065,Maybelline Supplement Elite,Beauty & Health,Supplements,Maybelline,3085.73,1425.91,4.0,4358
+PROD-0066,Nike Nutrition Elite,Sports & Fitness,Nutrition,Nike,3066.74,1934.46,3.8,14
+PROD-0067,Under Armour Outdoor Classic,Sports & Fitness,Outdoor,Under Armour,12793.32,9034.5,3.8,1884
+PROD-0068,Puma Outdoor Ultra,Sports & Fitness,Outdoor,Puma,10709.38,7299.7,4.6,4724
+PROD-0069,Puma Gym Equipment Lite,Sports & Fitness,Gym Equipment,Puma,4275.33,2424.11,4.8,691
+PROD-0070,Under Armour Yoga Lite,Sports & Fitness,Yoga,Under Armour,26338.96,14302.75,2.5,63
+PROD-0071,Under Armour Nutrition Classic,Sports & Fitness,Nutrition,Under Armour,3798.51,1528.97,3.0,2592
+PROD-0072,Decathlon Outdoor Elite,Sports & Fitness,Outdoor,Decathlon,3464.52,1902.45,3.1,4396
+PROD-0073,Under Armour Outdoor Classic,Sports & Fitness,Outdoor,Under Armour,11158.63,5539.66,3.5,1673
+PROD-0074,Under Armour Outdoor Max,Sports & Fitness,Outdoor,Under Armour,23577.52,13412.4,3.9,3967
+PROD-0075,Decathlon Yoga Plus,Sports & Fitness,Yoga,Decathlon,17455.24,11711.91,4.3,980
+PROD-0076,Puma Sportswear Pro,Sports & Fitness,Sportswear,Puma,23557.35,17249.54,3.0,3286
+PROD-0077,Under Armour Yoga Pro,Sports & Fitness,Yoga,Under Armour,18535.55,11855.29,2.9,48
+PROD-0078,Adidas Gym Equipment Pro,Sports & Fitness,Gym Equipment,Adidas,14307.56,8728.84,2.7,1821
+PROD-0079,Godrej Furniture Plus,Home & Kitchen,Furniture,Godrej,2367.89,1265.67,4.0,4273
+PROD-0080,Ikea Storage Plus,Home & Kitchen,Storage,Ikea,47311.93,32507.08,3.6,1657
